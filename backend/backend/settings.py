@@ -31,21 +31,25 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
-    'django.contrib.admin',
+    #  'jazzmin',
+    #  'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    
+    #Custom Apps
+    'api',
+    'customer',
+    'vendor',
+    'store',
+    'userauth',
+    
 ]
 
-#Custom Apps
-'api',
-'customer',
-'vendor',
-'store',
-'userauth',
+
 
 
 MIDDLEWARE = [
@@ -130,6 +134,11 @@ STATIC_ROOT=BASE_DIR / 'staticfiles'
 
 MEDIA_URL= 'media/'
 MEDIA_ROOT=BASE_DIR / 'media'
+
+
+
+
+AUTH_USER_MODEL ='userauth.User'
 
 
 # Default primary key field type
